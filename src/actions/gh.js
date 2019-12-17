@@ -5,7 +5,7 @@ const alfy = require('alfy');
 const token = alfy.config.get('token');
 
 if (!token) {
-  return alfy.error(new Error(`Run "gh-token" with your Personal GitHub Token (read:org, repo:status)`));
+  return alfy.error(new Error(`Run "gh-token" first for setup`));
 }
 
 const repoNodes = alfy.config.get('repositories');

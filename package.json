@@ -1,6 +1,6 @@
 {
   "name": "@renuo/alfred-fast-fuzzy-github-repos",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Fuzzy search your Github repository names very fast",
   "homepage": "https://github.com/renuo/alfred-fast-fuzzy-github-repos",
   "repository": "github:renuo/alfred-fast-fuzzy-github-repos",

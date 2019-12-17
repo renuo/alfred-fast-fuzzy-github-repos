@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist>
+<plist version="1.0">
 <dict>
 	<key>bundleid</key>
 	<string>ch.renuo.alfred.gh</string>
@@ -34,7 +34,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>629857AB-4E10-44F0-A258-7F13AA10AD1A</key>
+		<key>B20AEBC2-3770-4666-95D3-9D0CE86C8F61</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -74,6 +74,10 @@
 			</dict>
 		</array>
 	</dict>
+	<key>createdby</key>
+	<string>schmijos</string>
+	<key>description</key>
+	<string>Fuzzy search your Github repository names very fast</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -131,7 +135,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node src/actions/token.js "$1"</string>
+				<string>./node_modules/.bin/run-node src/actions/gh-token.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -162,9 +166,9 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Token has been updated successfully</string>
+				<string>Token has been set</string>
 				<key>title</key>
-				<string>gh-token</string>
+				<string>gh-token successful</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -199,6 +203,55 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>gh-sync</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/actions/gh-sync.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Download the list of my Github repos</string>
+				<key>title</key>
+				<string>gh-sync</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B20AEBC2-3770-4666-95D3-9D0CE86C8F61</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -206,35 +259,14 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Successfully updated Github repository list ({query} elements)</string>
+				<string>Repository list contains now {query} elements</string>
 				<key>title</key>
-				<string>gh-sync</string>
+				<string>gh-sync successful</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>BD4BED06-0179-4B6A-937F-A90AADE63A60</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>gh-sync</string>
-				<key>subtext</key>
-				<string>Download the list of my Github repos</string>
-				<key>text</key>
-				<string>gh-sync</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>629857AB-4E10-44F0-A258-7F13AA10AD1A</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -266,7 +298,7 @@
 				<key>runningsubtext</key>
 				<string>…</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node src/actions/my.js "$1"</string>
+				<string>./node_modules/.bin/run-node src/actions/gh.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -329,15 +361,6 @@
 			<key>ypos</key>
 			<integer>70</integer>
 		</dict>
-		<key>629857AB-4E10-44F0-A258-7F13AA10AD1A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>50</integer>
-			<key>ypos</key>
-			<integer>225</integer>
-		</dict>
 		<key>9DCDE5FB-CBB1-489D-8B27-D8FDDF01DB67</key>
 		<dict>
 			<key>colorindex</key>
@@ -346,6 +369,15 @@
 			<integer>440</integer>
 			<key>ypos</key>
 			<integer>70</integer>
+		</dict>
+		<key>B20AEBC2-3770-4666-95D3-9D0CE86C8F61</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>55</integer>
+			<key>ypos</key>
+			<integer>225</integer>
 		</dict>
 		<key>B6D4077A-7442-48D5-A0B6-DB52F139FFA4</key>
 		<dict>
@@ -361,7 +393,7 @@
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>445</integer>
+			<integer>440</integer>
 			<key>ypos</key>
 			<integer>225</integer>
 		</dict>
@@ -379,12 +411,14 @@
 			<key>colorindex</key>
 			<integer>4</integer>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>440</integer>
 			<key>ypos</key>
 			<integer>385</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>0.1.4</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/renuo/alfred-fast-fuzzy-github-repos</string>
 </dict>
 </plist>
