@@ -9,7 +9,7 @@ Written in JavaScript with [alfy](https://github.com/sindresorhus/alfy).
 ## Installation
 
 ```
-npm install --global @renuo/alfred-fast-fuzzy-github-repos --registry=https://npm.pkg.github.com/
+npm install --global @renuo/alfred-fast-fuzzy-github-repos --@renuo:registry=https://npm.pkg.github.com
 ```
 
 ## Actions
