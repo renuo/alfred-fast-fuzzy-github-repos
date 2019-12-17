@@ -1,5 +1,5 @@
 {
-  "name": "alfred-fast-fuzzy-github-repos",
+  "name": "@renuo/alfred-fast-fuzzy-github-repos",
   "version": "0.1.0",
   "description": "Fuzzy search your Github repository names very fast",
   "homepage": "https://github.com/renuo/alfred-fast-fuzzy-github-repos",
@@ -9,9 +9,12 @@
   },
   "author": {
     "name": "schmijos",
-    "email": "j@renuo.ch"
+    "email": "josua.schmid@renuo.ch"
   },
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "alfy": "^0.9.1"
   }
