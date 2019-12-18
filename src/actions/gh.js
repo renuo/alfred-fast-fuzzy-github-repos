@@ -3,6 +3,7 @@
 
 const alfy = require('alfy');
 const token = alfy.config.get('token');
+const input = alfy.input;
 
 if (!token) {
   return alfy.error(new Error(`Run "gh-token" first for setup`));
@@ -24,6 +25,11 @@ const results = alfy
     return fuzzyMatch(input, item.nameWithOwner);
   })
   .sort((nodeA, nodeB) => nodeA.nameWithOwner.length - nodeB.nameWithOwner.length)
+  .sort((nodeA, nodeB) => {
+    if (nodeA.name.includes(input) && !nodeB.name.includes(input)) { return -1; }
+    if (nodeB.name.includes(input) && !nodeA.name.includes(input)) { return 1; }
+    return 0;
+  })
   .map((node) => {
     return {
       title: node.nameWithOwner,
